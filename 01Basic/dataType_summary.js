@@ -35,3 +35,32 @@ let myObj= {
 const myFunction = function(){
     console.log("Hello world");
 }
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+// memory 
+// stack(primitive) provide the copy of data
+//heap(non primitive) provide the reference of data
+
+
+
+let myYouTubeName = "hiteshchoudharydotcom"
+
+let anothername = myYouTubeName
+anothername = "chaiaurcode"
+
+console.log(myYouTubeName);
+console.log(anothername);
+
+
+let userOne = {
+    email : "user@google.com",
+    upi : "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "hitesh@google.com"
+console.log(userOne.email);
+console.log(userTwo.email);
