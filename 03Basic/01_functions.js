@@ -51,6 +51,49 @@ function loginUserMessage(username  = " sam")   // sam as default
 }
 
 //console.log(loginUserMessage("Hitesh"));   // Hitesh just logged in
-console.log(loginUserMessage());       // just logged in
+//console.log(loginUserMessage());       // just logged in
 
 
+
+
+
+
+
+
+// rest operator
+
+function calulateCartPrice(...num1)
+{
+    return num1
+}
+//console.log(calulateCartPrice(200,2300,200,400,500));    // store as in array
+
+
+
+// obejct to pass ti the function 
+
+const user = {
+    username : "Hitesh",
+    price : 199
+}
+
+function handleObject(anyobject)
+{
+    console.log(`Username id ${anyobject.username} and price is ${anyobject.price}`);
+}
+// handleObject(user)     // function call 
+
+// user defined functioncal
+handleObject({
+    username:"Anant",
+    price:399
+})
+
+const myNewArray = [200,400,120,600]
+
+function returnSecondValue(getArray) {
+    return getArray[1]
+}
+
+//console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue([200,900,600,1000]));
