@@ -71,3 +71,25 @@ form.addEventListener('submit',function(e){
 })
 
 ```
+
+## Project 3 
+
+``` Javascript
+
+const clock = document.getElementById('clock')
+//const clock = document.querySelector('#clock')
+
+
+// let date = new Date()
+// console.log(date.toLocaleTimeString());
+
+// basic syntx :: setInterval(function(){} , 1000)  // 1000 in milli second
+
+setInterval(function(){
+  let date = new Date()
+//console.log(date.toLocaleTimeString());
+clock.innerHTML = date.toLocaleTimeString();
+},1000)
+
+
+```
