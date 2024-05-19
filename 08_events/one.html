@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/23709323/pexels-photo-23709323/free-photo-of-shot-with-oldroll-classic-m.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/23549050/pexels-photo-23549050/free-photo-of-a-lemur-sitting-on-a-rope-in-a-zoo.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/21348175/pexels-photo-21348175/free-photo-of-women-among-colonnade-in-ancient-temple.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/86596/owl-bird-eyes-eagle-owl-86596.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/22858681/pexels-photo-22858681/free-photo-of-a-street-light-and-a-bird-in-the-sky-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt=""></li>
+
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+
+    // attachEvent() :: works on application run on internet explorer
+    // jQuery -> on
+
+    // type , timeStamp , defaultPrevented
+    // target , toElement , srcElement , currentTarget ,
+    // clientX , clientY , screenX , screenY
+    // altkey , ctrlkey , shiftkey , keyCode
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log(e)
+    // },false)
+
+     // event propagtion  :  event bubbling(bottom - up ) and event capution(top - down)
+
+     // false : event bubbling
+     //true  : event capturing
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("clicked inside the ul")
+    // },false)
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("Owl Clicked")
+    //     e.stopPropagation()     // on click owl :: the event will not go upward as bubbling
+    // },false)
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault()  
+    //     e.stopPropagation()       // to stop bubbling
+    //     console.log("googled clicked")
+        
+    // })
+
+    // project scnerio :: on click the image will remove
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        //console.log(e.target.parentNode)
+        console.log(e.target.tagName)
+        if(e.target.tagName === 'IMG')
+        {
+            console.log(e.target.id)
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+
+        //removeIt.parentNode.removeChild(removeIt)
+    },false)
+
+
+</script>
+</html>
