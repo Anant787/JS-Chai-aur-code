@@ -14,7 +14,7 @@
     //     console.log(e)
     // },false)
 
-     // event propagtion  :  event bubbling(bottom - up ) and event capution(top - down)
+     // event propagtion  :  event bubbling(bottom - up ) and event caputering(top - down)
 
      // false : event bubbling
      //true  : event capturing
